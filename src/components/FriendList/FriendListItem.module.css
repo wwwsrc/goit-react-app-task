@@ -1,0 +1,29 @@
+.online {
+  display: flex;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: green;
+  margin: 0 15px 0 15px;
+}
+.offline {
+  composes: online;
+  background: red;
+}
+
+.item {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+  width: 255px;
+  border: 1px solid gray;
+  align-items: center;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 15px 0px 15px 0px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 24px;
+  padding-left: 25px;
+}

@@ -1,0 +1,32 @@
+.statistics {
+  margin: 0 auto;
+  width: 255px;
+}
+.title {
+  text-align: center;
+  background-color: azure;
+  margin: 0;
+  padding: 20px 0 20px 0;
+}
+.statlist {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(255px / 4);
+  padding: 5px;
+}
+.label {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.percentage {
+  font-style: italic;
+  font-weight: 600;
+}
