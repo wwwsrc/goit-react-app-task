@@ -1,13 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Statistic.module.css';
-
-const colorGen = () => {
-  let r = Math.floor(Math.random() * 256),
-    g = Math.floor(Math.random() * 256),
-    b = Math.floor(Math.random() * 256);
-  return '#' + r.toString(16) + g.toString(16) + b.toString(16);
-};
+import { colorGen } from './ColorGen';
 
 const Statistic = ({ stats, title }) => {
   // const { id, label, percentage } = stats;
@@ -30,3 +24,21 @@ const Statistic = ({ stats, title }) => {
   );
 };
 export default Statistic;
+
+Statistic.defaultProps = {
+  stats: {
+    label: 'none',
+    percentage: 'none',
+  },
+};
+
+Statistic.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    }),
+  ),
+};

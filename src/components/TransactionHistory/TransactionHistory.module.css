@@ -1,0 +1,17 @@
+.tableTitle {
+  background-color: rgb(218, 115, 204);
+  color: azure;
+  height: 40px;
+}
+
+.table {
+  margin: 0 auto;
+  width: 550px;
+  box-shadow: 10px 10px 5px 0px rgba(204, 200, 204, 1);
+  border: 1px solid gray;
+  padding: 0;
+  border-collapse: collapse;
+}
+.tbody tr:nth-child(2n) {
+  background: rgb(193, 212, 236);
+}

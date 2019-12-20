@@ -3,7 +3,7 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background: green;
+  background: greenyellow;
   margin: 0 15px 0 15px;
 }
 .offline {
@@ -20,6 +20,7 @@
   align-items: center;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 15px 0px 15px 0px;
+  background: #fff;
 }
 
 .name {

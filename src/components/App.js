@@ -8,10 +8,10 @@ import TransactionHistory from './TransactionHistory/TransactionHistory';
 function App({ user, statistic, friends, transactions }) {
   return (
     <div>
-      <Profile user={user} />
+      <Profile {...user} />
       <Statistic title="File upload" stats={statistic} />
       <FriendList friends={friends} />
-      {/* <TransactionHistory transactions={transactions} /> */}
+      <TransactionHistory items={transactions} />
     </div>
   );
 }

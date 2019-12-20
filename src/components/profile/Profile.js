@@ -1,14 +1,18 @@
-import React from "react";
-import css from "./Profile.module.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
-const Profile = ({ user }) => {
-  const {
-    name,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes }
-  } = user;
+const Profile = ({
+  name,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
+  // const {
+  //   stats: { followers, views, likes },
+  // } = user;
+  // console.log(stats);
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -37,3 +41,23 @@ const Profile = ({ user }) => {
 };
 
 export default Profile;
+
+Profile.defaultProps = {
+  avatar:
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2D6iUSiBYhLGC_2J4Yp3CwpA1aeOH3A0UEtFCRjnyIXC-o_XR9Q&s',
+  // likes: 'sssss',
+  // views: 'dddd',
+  // followers: 'sss',
+};
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }).isRequired,
+};
