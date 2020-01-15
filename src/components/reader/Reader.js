@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Controls from "./controls/Controls";
 import Progress from "./progress/Progress";
 import Publication from "./publication/Publication";
+import PropTypes from "prop-types";
 
 export default class Reader extends Component {
   static defaultProps = {
@@ -22,8 +23,8 @@ export default class Reader extends Component {
   };
 
   render() {
-    console.log(this.props.items);
     const publication = this.props.items[this.state.publicationIndex];
+    console.log(this.props.items);
     const disableBtnPrev = this.state.publicationIndex === 0 ? true : false;
     const disableBtnNext =
       this.state.publicationIndex === this.props.items.length - 1
