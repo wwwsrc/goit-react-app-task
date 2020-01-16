@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
 const Filter = ({ handleSearch }) => {
   return (
@@ -11,6 +12,10 @@ const Filter = ({ handleSearch }) => {
       />
     </>
   );
+};
+
+Filter.propTypes = {
+  handleSearch: PropTypes.func.isRequired
 };
 
 export default Filter;

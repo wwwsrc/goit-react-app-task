@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Controls = ({
   onPrevClick,
@@ -27,5 +28,11 @@ const Controls = ({
     </button>
   </section>
 );
+Controls.propTypes = {
+  onPrevClick: PropTypes.func.isRequired,
+  onNextClick: PropTypes.func.isRequired,
+  disableBtnPrev: PropTypes.bool.isRequired,
+  disableBtnNext: PropTypes.bool.isRequired
+};
 
 export default Controls;

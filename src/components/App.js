@@ -16,14 +16,3 @@ const App = () => {
 };
 
 export default App;
-
-// import React from "react";
-// import Counter from "./counter/Counter.js";
-
-// const App = () => (
-//   <div>
-//     <Counter />
-//   </div>
-// );
-
-// export default App;

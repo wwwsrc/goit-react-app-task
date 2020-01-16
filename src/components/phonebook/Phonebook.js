@@ -6,8 +6,12 @@ const uuidv4 = require("uuid/v4");
 
 class Phonebook extends Component {
   state = {
-    contacts: [],
-    filter: "",
+    contacts: [
+      { name: "Ted", number: "0952336565", id: "id-1" },
+      { name: "Bob", number: "0972356565", id: "id-2" },
+      { name: "Jax", number: "0634562323", id: "id-3" }
+    ],
+    filter: [],
     name: "",
     number: ""
   };
@@ -75,15 +79,15 @@ class Phonebook extends Component {
             name={this.state.name}
             number={this.state.number}
           />
+          <Filter handleSearch={this.handleSearch} />
 
           <h2>Contacts</h2>
           <ContactList
-            contacts={this.state.contacts}
+            contacts={
+              this.state.filter !== "" ? filteredContacts : this.state.contacts
+            }
             handleDelete={this.handleDelete}
-            /* filter={this.applyFilter} */
-            filter={filteredContacts}
           />
-          <Filter handleSearch={this.handleSearch} />
         </div>
       </>
     );
