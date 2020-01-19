@@ -5,7 +5,7 @@ import Phonebook from "./phonebook/Phonebook";
 const App = () => {
   return (
     <div>
-      <Phonebook />
+      <MovieGallery />
     </div>
   );
 };
