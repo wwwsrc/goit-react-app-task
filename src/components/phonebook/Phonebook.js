@@ -7,9 +7,9 @@ const uuidv4 = require("uuid/v4");
 class Phonebook extends Component {
   state = {
     contacts: [
-      { name: "Ted", number: "0952336565", id: "id-1" },
+      /*     { name: "Ted", number: "0952336565", id: "id-1" },
       { name: "Bob", number: "0972356565", id: "id-2" },
-      { name: "Jax", number: "0634562323", id: "id-3" }
+      { name: "Jax", number: "0634562323", id: "id-3" } */
     ],
     filter: [],
     name: "",
@@ -26,6 +26,17 @@ class Phonebook extends Component {
       };
     });
   };
+  componentDidMount() {
+    /* localStorage.setItem("contacts", JSON.stringify(this.state.contacts)); */
+    this.setState(prevState => {
+      return {
+        contacts: [
+          ...prevState.contacts,
+          ...JSON.parse(localStorage.getItem("contacts"))
+        ]
+      };
+    });
+  }
   handleSubmit = e => {
     e.preventDefault();
     let flag = true;
@@ -60,6 +71,14 @@ class Phonebook extends Component {
   handleSearch = e => {
     this.setState({ filter: e.target.value.toLowerCase() });
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts.length !== this.state.contacts.length) {
+      console.log(prevState.contacts.length, this.state.contacts.length);
+      localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
+    }
+  }
+
   /* applyFilter = e => {
     const filter = this.state.contacts.filter(contact => {
       return contact.name.toLowerCase().includes(this.state.filter);
