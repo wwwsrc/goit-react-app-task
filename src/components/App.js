@@ -1,9 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
 import { Route, Switch, Redirect, Link } from "react-router-dom";
 import HomePage from "./page/HomePage";
-import MoviesPage from "./page/MoviesPage";
-import MovieDetailsPage from "./MovieDetailsPage/MoviesDetailsPage";
 import services from "./services";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+// import MoviesPage from "./page/MoviesPage";
+// import MovieDetailsPage from "./MovieDetailsPage/MoviesDetailsPage";
+const MoviesPage = React.lazy(() => import("./page/MoviesPage"));
+const MovieDetailsPage = React.lazy(() =>
+  import("./MovieDetailsPage/MoviesDetailsPage")
+);
+// const HomePage = React.lazy(() => import("./page/HomePage"));
 
 export default class App extends Component {
   state = {
@@ -20,7 +27,7 @@ export default class App extends Component {
   }
   handleChange = e => {
     this.setState({ value: e.target.value });
-  };
+  };()
   handleSubmit = e => {
     e.preventDefault();
     services.searchMovies(this.state.value).then(data => {
@@ -34,24 +41,30 @@ export default class App extends Component {
       this.setState({ movies: data });
     });
   };
-  getMovieById = e => {
-    const [selectedMovie] = this.state.movies.filter(
-      movies => +movies.id === +e.target.id
-    );
-    console.log(e.target.id);
+  getMovieCast = async () => {
+    const cast = await services.getCasts(this.state.currentMovieId);
     this.setState({
-      currentMovie: selectedMovie,
-      currentMovieId: +e.target.id
+      cast
+    });
+  };
+  getMovieReviews = async() =>{
+    const reviews = await services.getReviews(this.state.currentMovieId)
+  }
+  getDetails = e => {
+    e.persist();
+    const currentMovie = await services.getMovieDetails(+e.target.id);
+    this.setState({
+      currentMovie: +e.target.id
     });
     console.log("object", selectedMovie);
   };
-  getMovieCast = async () => {
+ /*  getMovieCast = async () => {
     const cast = await services.getCasts(this.state.currentMovieId);
     this.setState({
       cast
       //shorthand cast:cast
     });
-  };
+  }; */
   // componentDidUpdate() {
   //   this.handleSubmit = e => {
   //     e.preventDefault();

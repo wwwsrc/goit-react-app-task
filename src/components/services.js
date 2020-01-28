@@ -27,6 +27,12 @@ export default {
       console.log(error);
     }
   },
+  async getReviews(id){
+    const data = await axios.get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${keyApi}&language=en-US&page=1`).then(data => data.data.results);
+    return data;
+  } catch(error){
+    console.log(error);
+  },
   async searchMovies(searchValue) {
     try {
       const data = await axios.get(
@@ -35,6 +41,13 @@ export default {
       return data.data.results;
     } catch (err) {
       throw err;
+    }
+  },
+  async getMovieDetails(id){
+    try{
+      const data = await axios.get(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${keyApi}&language=en-US`
+      )
     }
   }
 };
