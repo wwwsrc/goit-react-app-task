@@ -1,22 +1,33 @@
 {
   "files": {
-    "main.css": "/goit-react-app-task/static/css/main.019e7ae2.chunk.css",
-    "main.js": "/goit-react-app-task/static/js/main.2bfb68cf.chunk.js",
-    "main.js.map": "/goit-react-app-task/static/js/main.2bfb68cf.chunk.js.map",
-    "runtime-main.js": "/goit-react-app-task/static/js/runtime-main.7b2d7f63.js",
-    "runtime-main.js.map": "/goit-react-app-task/static/js/runtime-main.7b2d7f63.js.map",
-    "static/js/2.f5593b61.chunk.js": "/goit-react-app-task/static/js/2.f5593b61.chunk.js",
-    "static/js/2.f5593b61.chunk.js.map": "/goit-react-app-task/static/js/2.f5593b61.chunk.js.map",
+    "main.css": "/goit-react-app-task/static/css/main.dba591a4.chunk.css",
+    "main.js": "/goit-react-app-task/static/js/main.6ec1baaa.chunk.js",
+    "main.js.map": "/goit-react-app-task/static/js/main.6ec1baaa.chunk.js.map",
+    "runtime-main.js": "/goit-react-app-task/static/js/runtime-main.602fd25b.js",
+    "runtime-main.js.map": "/goit-react-app-task/static/js/runtime-main.602fd25b.js.map",
+    "static/css/2.bc3aac6f.chunk.css": "/goit-react-app-task/static/css/2.bc3aac6f.chunk.css",
+    "static/js/2.e7eb2b1c.chunk.js": "/goit-react-app-task/static/js/2.e7eb2b1c.chunk.js",
+    "static/js/2.e7eb2b1c.chunk.js.map": "/goit-react-app-task/static/js/2.e7eb2b1c.chunk.js.map",
+    "static/js/3.25f0a8bf.chunk.js": "/goit-react-app-task/static/js/3.25f0a8bf.chunk.js",
+    "static/js/3.25f0a8bf.chunk.js.map": "/goit-react-app-task/static/js/3.25f0a8bf.chunk.js.map",
+    "static/js/4.86496b67.chunk.js": "/goit-react-app-task/static/js/4.86496b67.chunk.js",
+    "static/js/4.86496b67.chunk.js.map": "/goit-react-app-task/static/js/4.86496b67.chunk.js.map",
+    "static/js/5.60e2fc3e.chunk.js": "/goit-react-app-task/static/js/5.60e2fc3e.chunk.js",
+    "static/js/5.60e2fc3e.chunk.js.map": "/goit-react-app-task/static/js/5.60e2fc3e.chunk.js.map",
+    "static/js/6.a3db388a.chunk.js": "/goit-react-app-task/static/js/6.a3db388a.chunk.js",
+    "static/js/6.a3db388a.chunk.js.map": "/goit-react-app-task/static/js/6.a3db388a.chunk.js.map",
     "index.html": "/goit-react-app-task/index.html",
-    "precache-manifest.1a22bddb0fef9fe3b6ab75979c712f73.js": "/goit-react-app-task/precache-manifest.1a22bddb0fef9fe3b6ab75979c712f73.js",
+    "precache-manifest.c7d0bb8c3647b7b8eb4d208b2ddc79df.js": "/goit-react-app-task/precache-manifest.c7d0bb8c3647b7b8eb4d208b2ddc79df.js",
     "service-worker.js": "/goit-react-app-task/service-worker.js",
-    "static/css/main.019e7ae2.chunk.css.map": "/goit-react-app-task/static/css/main.019e7ae2.chunk.css.map",
-    "static/js/2.f5593b61.chunk.js.LICENSE": "/goit-react-app-task/static/js/2.f5593b61.chunk.js.LICENSE"
+    "static/css/2.bc3aac6f.chunk.css.map": "/goit-react-app-task/static/css/2.bc3aac6f.chunk.css.map",
+    "static/css/main.dba591a4.chunk.css.map": "/goit-react-app-task/static/css/main.dba591a4.chunk.css.map",
+    "static/js/2.e7eb2b1c.chunk.js.LICENSE": "/goit-react-app-task/static/js/2.e7eb2b1c.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.7b2d7f63.js",
-    "static/js/2.f5593b61.chunk.js",
-    "static/css/main.019e7ae2.chunk.css",
-    "static/js/main.2bfb68cf.chunk.js"
+    "static/js/runtime-main.602fd25b.js",
+    "static/css/2.bc3aac6f.chunk.css",
+    "static/js/2.e7eb2b1c.chunk.js",
+    "static/css/main.dba591a4.chunk.css",
+    "static/js/main.6ec1baaa.chunk.js"
   ]
 }

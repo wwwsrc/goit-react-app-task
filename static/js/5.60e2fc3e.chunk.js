@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-hw-01-components"]=this["webpackJsonpreact-hw-01-components"]||[]).push([[5],{86:function(e,t,n){"use strict";n.r(t);var r=n(0),a=n.n(r);t.default=function(e){var t=e.reviews,n=void 0===t?[]:t;return console.log("reviews++++++ :",n),a.a.createElement("ul",null,n.map((function(e){var t=e.author,n=e.content,r=e.id;return a.a.createElement("li",{key:r},a.a.createElement("h2",null,"Author:",t),a.a.createElement("p",null,n))})))}}}]);
+//# sourceMappingURL=5.60e2fc3e.chunk.js.map
